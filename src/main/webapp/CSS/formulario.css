@@ -1,0 +1,111 @@
+
+  main{
+    display: flex;
+  }
+
+ .registro {
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 10px 55px 10px 55px;
+}
+
+.registro label {
+    display: block;
+    margin-bottom: 5px;
+    border-bottom:1px solid black ;
+}
+
+.registro input {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .registro {
+    grid-template-columns: auto;
+}
+}
+.login{
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 10px 55px 10px 55px;
+}
+
+  .registro input[type="text"], 
+  input[type="password"], input[type="email"]{
+    border-radius: 5px;
+  }
+
+  .registro input[type="submit"]{
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #F39A00;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    border: none;
+  }
+
+  .registro input[type="submit"]:hover{
+    background-color: #b37100;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 787px){
+    .registro{
+        width: 90%;
+    }
+  }
+  
+    .notAvailable{
+    opacity: 50%;
+}
+
+.error{
+  border: 1px solid #ff0000;
+}
+
+.bien{
+  border: 1px solid #51ff00;
+}
+
+.mensaje{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.718);
+    color: white;
+    margin-top: 0;
+    opacity: 0;
+    padding: 5px;
+    transform: translateY(-100px);
+    transition:  1s ease;
+}
+
+.mensaje.mostrar {
+    opacity: 1; 
+    transform: translateY(0px);
+}
